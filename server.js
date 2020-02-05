@@ -54,9 +54,7 @@ app.delete("/api/notes/:id", (req, res) => {
 app.get("/notes",(req,res) => {
   res.sendFile(path.join(__dirname, "/public/notes.html"));
 });
-app.get("/", (req, res)=> {
-  res.send("Helo world")
-})
+
 app.get("*",(req, res) => {
   return res.sendFile(path.join(__dirname, "/public/index.html"));
 });
